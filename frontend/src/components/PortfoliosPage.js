@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useUser, SignInButton } from '@clerk/react';
 
-const API_BASE = 'http://127.0.0.1:8000/api';
+const API_BASE = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/api';
 
 const TEMPLATES = [
   { id: 'minimal',     label: 'Minimal',     icon: '◻', color: '#6366f1' },

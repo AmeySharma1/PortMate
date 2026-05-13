@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import templates from '../templates/index';
 
-const API = 'http://127.0.0.1:8000/api';
+const API = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/api';
 
 export default function PortfolioViewer({ slug, onBack }) {
   const [data, setData] = useState(null);
